@@ -1,6 +1,6 @@
 ###     Computation of the maximally selected statistics from data
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###
@@ -57,7 +57,29 @@ if (!is.null(y))
     }   
    }
   }
- 
+
+ if (type=="ord2")
+  {
+  for (k in 1:(K-1))
+   {
+   for (j in (k+1):K)
+    {
+    c1<-sum(y==0&(x>levelsx[k])&(x<=levelsx[j]))
+    c2<-sum(y==1&(x>levelsx[k])&(x<=levelsx[j]))
+    c3<-n0-c1
+    c4<-n1-c2
+    if (statistic=="chi2")
+     {
+     statvector<-c(statvector,chisq.test(matrix(c(c1,c2,c3,c4),2,2),correct=FALSE)$statistic)
+     }
+    if (statistic=="gini")
+     {
+     statvector<-c(statvector,ginigain(matrix(c(c1,c2,c3,c4),2,2)))
+     }
+    }   
+   }
+  }
+
    
 
  if (type=="cat")
@@ -137,6 +159,29 @@ if (is.null(y)&ncol(as.matrix(x))>1)
    }
   }
   
+
+if (type=="ord2")
+  {
+  for (k in 1:(K-1))
+   {
+   for (j in (k+1):K)
+    {
+    c1<-sum(x[1,(k+1):j])
+    c2<-sum(x[2,(k+1):j])
+    c3<-n0-c1
+    c4<-n1-c2
+    if (statistic=="chi2")
+     {
+     statvector<-c(statvector,chisq.test(matrix(c(c1,c2,c3,c4),2,2),correct=FALSE)$statistic)
+     }
+    if (statistic=="gini")
+     {
+     statvector<-c(statvector,ginigain(matrix(c(c1,c2,c3,c4),2,2)))
+     }
+    }   
+   }
+  }
+
  
   
    
@@ -163,16 +208,6 @@ if (is.null(y)&ncol(as.matrix(x))>1)
   }  
  }
  
-
-
-if (statistic=="chi2")
- {
- statvector<-c(statvector,chisq.test(matrix(c(c1,c2,c3,c4),2,2),correct=FALSE)$statistic)
- }
-if (statistic=="gini")
- {
- statvector<-c(statvector,ginigain(matrix(c(c1,c2,c3,c4),2,2)))
- }   
     
 maxsel<-max(as.numeric(statvector))
 return(maxsel)

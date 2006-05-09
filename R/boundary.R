@@ -1,7 +1,7 @@
 
 ###     Computes the coordinates of the boundaries 
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###

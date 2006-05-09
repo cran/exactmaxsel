@@ -17,7 +17,8 @@ maxsel.test(x, y=NULL, type, statistic)
   to \code{y=NULL}.}
   \item{type}{the type of the considered binary splits. \code{type="ord"}
   corresponds to an ordinal X variable, \code{type="cat"} 
-  corresponds to a categorical X variable with unordered categories. }
+  corresponds to a categorical X variable with unordered categories, \code{type="ord2"} corresponds
+  to an ordinal X variable with 2 cutpoints (non-monotonous association). }
   \item{statistic}{the association measure used as criterion to select the
   best split. Currently, only \code{statistic="chi2"} (chi-square statistic)
   and \code{statistic="gini"} (the Gini-gain from machine learning) are
@@ -35,9 +36,12 @@ depend on \code{type} (see details). If p denotes the output of the function
 }
 
 \details{
-For example, let us consider a variable X with the possible values {1,2,3}.
-If \code{type="ord"}, the set of candidate splits consists of {1}{2,3} and {1,2}{3}.
-If \code{type="cat"}, the set of candidate splits consists of {1}{2,3}, {1,2}{3} and {1,3}{2}.
+For example, let us consider a variable X with the possible values {1,2,3,4}.
+If \code{type="ord"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4} and {1}{2,3,4}.
+If \code{type="cat"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4}, 
+{1,2,3}{4}, {1,2,4}{3}, {1,4}{2,3}, {1,3,4}{2}, {1,3}{2,4}.
+If \code{type="ord2"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4}, 
+{1,2,3}{4}, {1,2,4}{3}, {1,4}{2,3}, {1,3,4}{2}.
 }
 
 \value{
@@ -48,7 +52,7 @@ from the data, under the null-hypothesis of no association between \code{x} and
 
 \references{
   A.-L. Boulesteix (2006), Maximally selected chi-square statistics
- for ordinal variables, Biometrical Journal 48.
+ for ordinal variables, Biometrical Journal 48:451-462.
  
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
  and binary splits of nominal variables, Biometrical Journal 48.
@@ -56,11 +60,12 @@ from the data, under the null-hypothesis of no association between \code{x} and
  C. Strobl, A.-L. Boulesteix and T. Augustin (2006), Unbiased split selection 
  for classification trees based on the Gini index, submitted.
  
-
+ A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics
+ and umbrella orderings, submitted.
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.statistik.lmu.de/~socher/}) 
+  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
    
 }
 \seealso{\code{\link{maxsel}}.}

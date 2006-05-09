@@ -67,7 +67,7 @@ pregnancy forums in august 2004 by Anne-Laure Boulesteix.}
 
 \references{
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics for ordinal variables,
- Biometrical Journal 48.
+ Biometrical Journal 48:451-462.
 }
 
 \examples{

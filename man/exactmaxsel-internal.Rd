@@ -1,16 +1,14 @@
 \name{exactmaxsel-internal}
-\alias{Points}
-\alias{bipointok}
-\alias{cc}
-\alias{CC}
-\alias{MatrixC}
-\alias{loop}
 \alias{lower}
 \alias{upper}
-\alias{sumloop}
-\alias{subloop}
+\alias{sumloop_cat}
+\alias{subloop_cat}
+\alias{loop_cat}
 \alias{path}
 \alias{underpmax}
+\alias{loop_ord2}
+\alias{subloop_ord2}
+
 
 \title{Internal exactmaxsel Functions}
 \description{

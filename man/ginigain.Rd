@@ -40,7 +40,7 @@ treat X and Y symmetrically.
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.statistik.lmu.de/~socher/}) 
+  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
    
 }
 \seealso{\code{\link{maxsel.test}}.}

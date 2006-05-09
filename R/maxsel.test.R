@@ -1,6 +1,6 @@
 ###    Test of independence based on maximally selected statistics
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###
@@ -64,6 +64,13 @@ if (type=="cat")
  p<-Fcat(c=maxselcrit,n0=n0,n1=n1,A=A,statistic=statistic)
  return(p)
  }
+
+if (type=="ord2")
+ {
+ p<-Ford2(c=maxselcrit,n0=n0,n1=n1,A=A,statistic=statistic)
+ return(p)
+ }
+
 
 }
 

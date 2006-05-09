@@ -50,7 +50,7 @@ This function should not be called by the user in practice.
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.statistik.lmu.de/~socher/}) 
+  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
    
 }
 \seealso{\code{\link{Ford}}, \code{\link{Fcat}}.}

@@ -1,6 +1,6 @@
 ###     Computation of the Gini gain from a 2x2 contingency table
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###

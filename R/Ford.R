@@ -1,6 +1,6 @@
-###     Distribution of maximally selected statistics for ordinal variables 
+###     Distribution of maximally selected statistics for ordinal variables with one cutpoints
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###
@@ -62,9 +62,10 @@ for (i in 1:length(xx))
  {
  pval<-pval+b[i]*choose(N-x[i],n1-y[i])
  }
+
 pval<-1-pval/choose(N,n1)
 
-pval
+return(pval)
 
 }
 
@@ -101,9 +102,17 @@ quot<-1/n0+1/n1
   Acum[k]<-i
   myboundary<-boundary(x=i,n0=n0,n1=n1,c=c,lower=TRUE,statistic=statistic)
   pmk<-floor(myboundary$upper)+1
-  if (pmk<=min(i,n1))
+  if (length(pathmax)>0)
    {
-   pathmaxk<-seq(pmk,min(i,n1))
+   a<-min(pathmax[Amax==max(Amax)])+(Acum[k]-max(Amax))-1
+   }
+  else
+   {
+   a<-n1
+   }
+  if (pmk<=min(i,n1,a))
+   {
+   pathmaxk<-seq(pmk,min(i,n1,a))
    }
   else
    {
@@ -111,9 +120,17 @@ quot<-1/n0+1/n1
    }
 
   pmk<-ceiling(myboundary$lower)-1
-  if (pmk>=max(0,i-n0))
+  if (length(pathmin>0))
    {
-   pathmink<-seq(max(0,i-n0),pmk)
+   a<-max(pathmin[Amin==max(Amin)])+1
+   }
+  else
+   {
+   a<-0
+   }
+  if (pmk>=max(0,i-n0,a))
+   {
+   pathmink<-seq(max(0,i-n0,a),pmk)
    }
   else
    {

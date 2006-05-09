@@ -1,7 +1,7 @@
 
-###     Distribution of maximally selected statistics for nominal variables 
+###     Distribution of maximally selected statistics for multicategorical variables 
 ###
-### Copyright 2006-05 Anne-Laure Boulesteix 
+### Copyright 2006-09 Anne-Laure Boulesteix 
 ###
 ### 
 ###
@@ -29,13 +29,13 @@ K<-length(A)
 if (N!=sum(A))
  stop("error: you must have n0+n1=sum(A)")
 
-number<-sum(as.numeric(permn(K,fun=sumloop,n0=n0,n1=n1,A=A,c=c,statistic=statistic)))
+number<-sum(as.numeric(permn(K,fun=sumloop_cat,n0=n0,n1=n1,A=A,c=c,statistic=statistic)))
  
 return(1-number/choose(n0+n1,n1))
 }
 
 ###########################
-loop<-function(sigma,I,k,n0,n1,A,whichboundary,c,statvector,statistic)
+loop_cat<-function(sigma,I,k,n0,n1,A,whichboundary,c,statvector,statistic)
 {
 K<-length(A)
 N<-n0+n1
@@ -79,7 +79,7 @@ else
  else
   {  
  
-number<-sum(sapply(as.list(lowerbound:upperbound),FUN=subloop,I=I,k=k,n0=n0,n1=n1,A=A,sigma=sigma,whichboundary=whichboundary,c=c,statvector=statvector,statistic=statistic))
+number<-sum(sapply(as.list(lowerbound:upperbound),FUN=subloop_cat,I=I,k=k,n0=n0,n1=n1,A=A,sigma=sigma,whichboundary=whichboundary,c=c,statvector=statvector,statistic=statistic))
   }
  }
 
@@ -89,10 +89,10 @@ return(number)
 }
 
 #################
-subloop<-function(i,I,k,n0,n1,A,sigma,whichboundary,c,statvector,statistic)
+subloop_cat<-function(i,I,k,n0,n1,A,sigma,whichboundary,c,statvector,statistic)
 {
 
-number<-choose(A[k],i)*loop(I=c(I,i),k=k+1,n0=n0,n1=n1,A=A,sigma=sigma,whichboundary=whichboundary,c=c,statvector=statvector,statistic=statistic)
+number<-choose(A[k],i)*loop_cat(I=c(I,i),k=k+1,n0=n0,n1=n1,A=A,sigma=sigma,whichboundary=whichboundary,c=c,statvector=statvector,statistic=statistic)
 
 return(number)
 }
@@ -148,12 +148,12 @@ return(lower)
 
 #########################
 
-sumloop<-function(sigma,n0,n1,A,c,statistic)
+sumloop_cat<-function(sigma,n0,n1,A,c,statistic)
 {
 
 K<-length(A)
 statvector<-numeric(K-1)
-sumloop<-numeric(K-1)
+sumloop_cat<-numeric(K-1)
 A<-A[sigma]
 
 for (i in 1:(K-1))
@@ -163,10 +163,10 @@ for (i in 1:(K-1))
 
 for (k in 1:(K-1))
  {
- sumloop[k]<-loop(sigma,I=c(),k=1,n0=n0,n1=n1,A=A,whichboundary=k,c=c,statvector=statvector,statistic=statistic)
+ sumloop_cat[k]<-loop_cat(sigma,I=c(),k=1,n0=n0,n1=n1,A=A,whichboundary=k,c=c,statvector=statvector,statistic=statistic)
  }
 
-return(sum(sumloop))
+return(sum(sumloop_cat))
 
 
 }
