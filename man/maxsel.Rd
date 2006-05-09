@@ -1,0 +1,82 @@
+\name{maxsel}
+\alias{maxsel}
+
+\title{Maximally selected criterion}
+\usage{
+maxsel(x, y=NULL, type, statistic)
+}
+\arguments{
+  \item{x}{a numeric vector of length n giving the values of the variable
+  X for the considered n observations. The
+  classes  must be coded as 1,...,K. Alternatively, \code{x} can be a 2 x K matrix corresponding
+  to a contingency table,
+  where the two rows are for the values of Y (Y=0,1) and the K columns are for the values
+  of X (X=1,...,K). In this case, \code{y} must be set to \code{y=NULL}.
+  }
+  \item{y}{a numeric vector of length n giving the class (response variable Y) of the considered observations. The
+  classes  must be coded as 0 and 1. If \code{x} is a contingency table, \code{y} must be set
+  to \code{y=NULL}.}
+  \item{type}{the type of the considered binary splits. \code{type="ord"}
+  corresponds to an ordinal X variable, \code{type="cat"} 
+  corresponds to a categorical X variable with unordered categories. }
+  \item{statistic}{the association measure used as criterion to select the
+  best split. Currently, only \code{statistic="chi2"} (chi-square statistic)
+  and \code{statistic="gini"} (the Gini-gain from machine learning) are
+  implemented.}  
+}
+\description{
+ The function \code{maxsel} computes the maximal value of the criterion of
+ interest (either the Gini-gain or the chi-square statistic) over some
+ candidate binary splits. The candidate binary splits depend on \code{type} (see
+ details).
+}
+
+\details{For example, let us consider a variable X with the possible values {1,2,3}.
+If \code{type="ord"}, the set of candidate splits consists of {1}{2,3} and {1,2}{3}.
+If \code{type="cat"}, the set of candidate splits consists of {1}{2,3}, {1,2}{3} and {1,3}{2}.
+}
+
+\value{
+  the value of the maximally selected criterion.
+    }
+
+\references{
+  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
+ for ordinal variables, Biometrical Journal 48.
+ 
+ A.-L. Boulesteix (2006), Maximally selected chi-square statistics
+ and binary splits of nominal variables, Biometrical Journal 48.
+ 
+ C. Strobl, A.-L. Boulesteix and T. Augustin (2006), Unbiased split selection 
+ for classification trees based on the Gini index, submitted.
+
+}
+
+\author{
+  Anne-Laure Boulesteix (\url{http://www.statistik.lmu.de/~socher/}) 
+   
+}
+\seealso{\code{\link{maxsel.test}}.}
+
+
+\examples{
+# load exactmaxsel library
+library(exactmaxsel)
+
+# First case: x and y are data vectors
+# Simulate x and y
+x<-sample(4,30,replace=TRUE)
+y<-sample(c(0,1),30,replace=TRUE)
+
+maxsel.test(x=x,y=y,type="ord",statistic="chi2")
+maxsel.test(x=x,y=y,type="cat",statistic="gini")
+
+
+# Second case: x is a contingency table, y=NULL.
+x<-matrix(c(8,10,40,13,15,4),2,4,byrow=TRUE)
+maxsel.test(x=x,y=NULL,type="ord",statistic="chi2")
+maxsel.test(x=x,y=NULL,type="cat",statistic="gini")
+
+
+}
+\keyword{htest}
