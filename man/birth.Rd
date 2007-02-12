@@ -63,7 +63,7 @@ A data frame with following variables
 }
 
 \source{This data set was collected from internet users via french-speaking 
-pregnancy forums in august 2004 by Anne-Laure Boulesteix.}
+pregnancy forums in August 2004 by Anne-Laure Boulesteix.}
 
 \references{
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics for ordinal variables,

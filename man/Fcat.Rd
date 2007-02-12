@@ -38,13 +38,15 @@ Fcat(c, n0, n1, A, statistic)
     }
 
 \references{
- 
+
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
- and binary splits of nominal variables, Biometrical Journal 48.
+ and binary splits of nominal variables, Biometrical Journal 48:838-848.
+
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
+
    
 }
 \seealso{\code{\link{Ford}}, \code{\link{Ford2}}, \code{\link{maxsel}}.}

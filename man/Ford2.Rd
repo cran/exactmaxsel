@@ -42,13 +42,13 @@ Ford2(c, n0, n1, A, statistic)
     }
 
 \references{
- 
+
  A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics
- and umbrella orderings, submitted.
+ and umbrella orderings, Computational Statistics and Data Analysis (in press).
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
    
 }
 \seealso{\code{\link{Ford}},\code{\link{Fcat}}, \code{\link{maxsel}}.}

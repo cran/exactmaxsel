@@ -44,14 +44,13 @@ Ford(c, n0, n1, A, statistic)
     }
 
 \references{
- 
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
  for ordinal variables, Biometrical Journal 48:451-462.
+
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
-   
+  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
 }
 \seealso{\code{\link{Fcat}}, \code{\link{Ford2}}, \code{\link{maxsel}}.}
 

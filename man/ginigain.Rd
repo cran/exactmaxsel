@@ -34,13 +34,13 @@ treat X and Y symmetrically.
  and Regression Trees, Wadsworth, Monterey, CA.
  
  C. Strobl, A.-L. Boulesteix and T. Augustin (2006), Unbiased split selection 
- for classification trees based on the Gini index, submitted.
+ for classification trees based on the Gini index, Computational Statistics and Data Analysis (in press).
  
  
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
    
 }
 \seealso{\code{\link{maxsel.test}}.}

@@ -46,22 +46,23 @@ If \code{type="ord2"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}
     }
 
 \references{
-  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
+ A.-L. Boulesteix (2006), Maximally selected chi-square statistics
  for ordinal variables, Biometrical Journal 48:451-462.
  
  A.-L. Boulesteix (2006), Maximally selected chi-square statistics
- and binary splits of nominal variables, Biometrical Journal 48.
+ and binary splits of nominal variables, Biometrical Journal 48:838-848.
  
- C. Strobl, A.-L. Boulesteix and T. Augustin (2006), Unbiased split selection 
- for classification trees based on the Gini index, submitted.
+ C. Strobl, A.-L. Boulesteix and T. Augustin (2007), Unbiased split selection 
+ for classification trees based on the Gini index, Computational Statistics and Data
+Analysis (in press).
  
  A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics
- and umbrella orderings, submitted.
+ and umbrella orderings, Computational Statistics and Data Analysis (in press).
 
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.imse.med.tu-muenchen.de/mitarbeiter/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
    
 }
 \seealso{\code{\link{maxsel.test}}.}
