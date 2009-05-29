@@ -36,12 +36,12 @@ depend on \code{type} (see details). If p denotes the output of the function
 }
 
 \details{
-For example, let us consider a variable X with the possible values {1,2,3,4}.
-If \code{type="ord"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4} and {1}{2,3,4}.
-If \code{type="cat"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4}, 
-{1,2,3}{4}, {1,2,4}{3}, {1,4}{2,3}, {1,3,4}{2}, {1,3}{2,4}.
-If \code{type="ord2"}, the set of candidate splits consists of {1}{2,3,4}, {1,2}{3,4}, 
-{1,2,3}{4}, {1,2,4}{3}, {1,4}{2,3}, {1,3,4}{2}.
+For example, let us consider a variable X with the possible values \{1,2,3,4\}.
+If \code{type="ord"}, the set of candidate splits consists of \{1\}\{2,3,4\}, \{1,2\}\{3,4\} and \{1\}\{2,3,4\}.
+If \code{type="cat"}, the set of candidate splits consists of \{1\}\{2,3,4\}, \{1,2\}\{3,4\}, 
+\{1,2,3\}\{4\}, \{1,2,4\}\{3\}, \{1,4\}\{2,3\}, \{1,3,4\}\{2\}, \{1,3\}\{2,4\}.
+If \code{type="ord2"}, the set of candidate splits consists of \{1\}\{2,3,4\}, \{1,2\}\{3,4\}, 
+\{1,2,3\}\{4\}, \{1,2,4\}\{3\}, \{1,4\}\{2,3\}, \{1,3,4\}\{2\}.
 }
 
 \value{
@@ -59,15 +59,14 @@ from the data, under the null-hypothesis of no association between \code{x} and
  
  C. Strobl, A.-L. Boulesteix and T. Augustin (2007), Unbiased split selection 
  for classification trees based on the Gini index, Computational Statistics and Data
-Analysis (in press).
+Analysis 52:483-501.
  
- A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics
- and umbrella orderings, Computational Statistics and Data Analysis (in press).
+ A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics and non-monotonic associations: an exact approach based on two cutpoints. Computational Statistics and Data Analysis 51:6295-6306.
 
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/}) 
    
 }
 \seealso{\code{\link{maxsel}}.}

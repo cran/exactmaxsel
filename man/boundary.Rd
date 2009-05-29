@@ -43,12 +43,12 @@ This function should not be called by the user in practice.
  
  C. Strobl, A.-L. Boulesteix and T. Augustin (2007), Unbiased split selection 
  for classification trees based on the Gini index, Computational Statistics and Data
-Analysis (in press).
+Analysis 52:483-501.
 
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}).
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/}).
    
 }
 \seealso{\code{\link{Ford}}, \code{\link{Fcat}}.}

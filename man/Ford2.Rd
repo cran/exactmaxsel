@@ -30,10 +30,10 @@ Ford2(c, n0, n1, A, statistic)
   Suppose the response Y is
  binary (Y=0,1) and the predictor X has K ordered categorical values
  (X=1,...,K). The criterion is maximized over all the binary splittings of the
- set {1,...,K} that are obtained from at most two cutpoints.  For example, with K=4, 
+ set \{1,...,K\} that are obtained from at most two cutpoints.  For example, with K=4, 
  the criterion is maximized 
- over the splittings {1,2,3}{4}, {1,2}{3,4}, {1}{2,3,4}, {1,2,4}{3}, {1,4}{2,3} 
- and {1,3,4}{2}. 
+ over the splittings \{1,2,3\}\{4\}, \{1,2\}\{3,4\}, \{1\}\{2,3,4\}, \{1,2,4\}\{3\}, \{1,4\}\{2,3\} 
+ and \{1,3,4\}\{2\}. 
 
 }
 
@@ -43,12 +43,10 @@ Ford2(c, n0, n1, A, statistic)
 
 \references{
 
- A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics
- and umbrella orderings, Computational Statistics and Data Analysis (in press).
-}
+ A.-L. Boulesteix and C. Strobl (2006), Maximally selected chi-square statistics and non-monotonic associations: an exact approach based on two cutpoints. Computational Statistics and Data Analysis 51:6295-6306.}
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/}) 
    
 }
 \seealso{\code{\link{Ford}},\code{\link{Fcat}}, \code{\link{maxsel}}.}

@@ -28,9 +28,9 @@ Fcat(c, n0, n1, A, statistic)
   Suppose the response Y is
  binary (Y=0,1) and the predictor X has K unordered categorical values
  (X=1,...,K). The criterion is maximized over all the binary splittings of the
- set {1,...,K}.  For example, if K=4, the criterion is thus maximized over the splittings
- {1}{2,3,4}, {1,2}{3,4}, 
-{1,2,3}{4}, {1,2,4}{3}, {1,4}{2,3}, {1,3,4}{2}, {1,3}{2,4}.
+ set \{1,...,K\}.  For example, if K=4, the criterion is thus maximized over the splittings
+ \{1\}\{2,3,4\}, \{1,2\}\{3,4\}, 
+\{1,2,3\}\{4\}, \{1,2,4\}\{3\}, \{1,4\}\{2,3\}, \{1,3,4\}\{2\}, \{1,3\}\{2,4\}.
 }
 
 \value{
@@ -45,7 +45,7 @@ Fcat(c, n0, n1, A, statistic)
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix}) 
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/}) 
 
    
 }
